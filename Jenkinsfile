@@ -17,17 +17,17 @@ pipeline{
       }
 	stage('Maven Build - Clean'){
 		steps{
-			sh "mvn clean"
+			sh "./mvn clean"
 		}
 	}
 	stage('Maven Build - compile'){
 		steps{
-			sh "mvn compile"
+			sh "./mvn compile"
 		}
 	}
 	stage('Maven Build - Test'){
 		steps{
-			sh "mvn test"
+			sh "./mvn test"
 		}
 	}
 	    
