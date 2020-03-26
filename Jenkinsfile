@@ -11,6 +11,28 @@ pipeline{
           git credentialsId: 'git_credentials', url: 'https://github.com/harikrishna12334/DockerWebApp.git' 
         }
       }
+	stage('Maven Build - Clean'){
+		steps{
+			sh "mvn clean"
+		}
+	}
+	stage('Maven Build - compile'){
+		steps{
+			sh "mvn compile"
+		}
+	}
+	stage('Maven Build - Test'){
+		steps{
+			sh "mvn test"
+		}
+	}
+	    
+	    
+	    
+	    
+	    
+	    
+	    
     }
 }
   
