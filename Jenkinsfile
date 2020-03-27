@@ -5,10 +5,7 @@ pipeline{
 	options {
 		buildDiscarder logRotator(daysToKeepStr: '5', numToKeepStr: '7')
 	}
-	environment {
-		PATH = "${PATH}:/home/jenkins/maven3/bin"
-		
-	}
+	
     stages{
       stage('SCM'){
         steps{
